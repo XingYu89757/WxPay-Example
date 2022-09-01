@@ -1,0 +1,19 @@
+server:
+  port: 9527
+  servlet:
+    context-path: /
+
+spring:
+  application:
+    name: wx-pay
+  flyway:
+    enabled: true
+    encoding: UTF-8
+    locations: classpath:db/migration
+    validate-on-migrate: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.100.179:3310/wx_pay?userSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
